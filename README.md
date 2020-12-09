@@ -1,12 +1,16 @@
 Files utilized for the creation of different smearing values for Drift Chambers, so to compare Monte Carlo simulations to the Data.
 
-To do : 
+How to : 
 1)Define a local copy of the sqlite calibtations files (test.sqlite) .
+
 2) Replace the smearing values located in  database : /calibration/dc/signal_geneeration/doca_smearing 
+
 3) cdb -c sqlite:///test.sqlite vers /calibration/dc/signal_generation/doca_smearing
+
 4) setenv CCDB_CONNECTIONsqlite:///PATH/test.sqlite
 
 Once the env variable is set to the proper sqlite file,  submit the Auger Script to the JLAB cluster machine.
+
 
 jsub Smearing.clasdis 
 
